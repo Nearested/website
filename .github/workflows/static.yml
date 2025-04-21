@@ -1,4 +1,3 @@
-# .github/workflows/deploy.yml
 name: Deploy static content to Pages
 
 on:
@@ -22,17 +21,16 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload artifact
+      - name: Upload HTML and assets
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload only HTML and assets from the root
-          path: './'
+          path: './'  # Ensure that this path includes all your HTML, MP3, and assets
 
       - name: Deploy to GitHub Pages
         id: deployment
