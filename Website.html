@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            transition: background-color 1s;
+        }
+
+        .gif {
+            width: 100px;
+            margin: 10px;
+        }
+
+        .section {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: #672cb9;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #3700b3;
+        }
+
+        .gif-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>wsg shawty, im ty</h1>
+    <p>Welcome to my crib, ill be showing you around:</p>
+
+    <div class="gif-grid">
+        <img src="https://i.imgflip.com/6i8cvj.gif" class="gif" alt="Fun GIF">
+        <img src="https://i.imgflip.com/6i8cvj.gif" class="gif" alt="Fun GIF">
+        <img src="https://i.imgflip.com/6i8cvj.gif" class="gif" alt="Fun GIF">
+    </div>
+
+    <div class="section">
+        <h2>About Me</h2>
+        <p>I love coding, gaming, and funny GIFs. I also enjoy learning new things and building cool projects.</p>
+    </div>
+
+    <div class="section">
+        <h2>My Hobbies</h2>
+        <p>Coding, playing video games, watching movies, making websites like this one, and collecting memes.</p>
+    </div>
+
+    <div class="section">
+        <h2>Contact Me</h2>
+        <p>You can reach me at: <strong>[your@email.com]</strong></p>
+    </div>
+
+    <button onclick="alert('Thanks for clicking!')">Click Me!</button>
+    <button onclick="alert('You clicked another one!')">Click Me Too!</button>
+
+    <div class="gif-grid">
+        <img src="https://i.imgflip.com/6i8cvj.gif" class="gif" alt="Fun GIF">
+        <img src="https://i.imgflip.com/6i8cvj.gif" class="gif" alt="Fun GIF">
+        <img src="https://i.imgflip.com/6i8cvj.gif" class="gif" alt="Fun GIF">
+    </div>
+
+    <script>
+        let r = 255, g = 100, b = 150;
+        let step = 1;
+
+        function updateBackground() {
+            r = (r + step) % 256;
+            g = (g + step * 2) % 256;
+            b = (b + step * 3) % 256;
+
+            document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        }
+
+        setInterval(updateBackground, 100); // Change every 100ms
+    </script>
+</body>
+</html>
